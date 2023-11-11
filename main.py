@@ -80,37 +80,4 @@ def primer(message):
         chat_id = '1019790287'
         bot.send_message(chat_id, mass1)
 
-
-
-
-
-
-#@bot.message_handler(content_types=(['photo']))
-#def get_user_photo(message):
-    #bot.send_message(message.from_user.id,'Крутое фото, щас жмыхну!', parse_mode='html')
-    #file_info = bot.get_file(message.photo[len(message.photo) - 1].file_id)
-    #downloaded_file = bot.download_file(file_info.file_path)
-    #src = 'C:/Users/Дмитрий/PycharmProjects/telegabot_a/files/' + file_info.file_path
-    #markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=3)
-    #blur = types.KeyboardButton('Заблюрить')
-    #contur = types.KeyboardButton('Выделить контуры')
-    #detail = types.KeyboardButton('Улучшить качество')
-    #edge = types.KeyboardButton('Четкость границ')
-    #edge_more = types.KeyboardButton('Больше четкости границ')
-    #emboss = types.KeyboardButton('Тиснение')
-    #find_edges = types.KeyboardButton('Обводка краёв')
-    #sharpen = types.KeyboardButton('Улучшение резкости')
-    #smooth =types.KeyboardButton('Сглаживание артефактов')
-    #smooth_more = types.KeyboardButton('Улучшенное сглаживание артефактов')
-    #markup.add(blur, contur, detail, edge, edge_more, emboss, find_edges, sharpen, smooth, smooth_more)
-    #with open(src, 'wb') as new_file:
-        #new_file.write(downloaded_file)
-    #original = Image.open('C:/Users/Дмитрий/PycharmProjects/telegabot_a/files/' + file_info.file_path)
-    #filtred = original.filter(ImageFilter.FIND_EDGES)
-    #f = open('C:/Users/Дмитрий/PycharmProjects/telegabot_a/files/'+ str(message.chat.id) +'.txt', 'w')
-    #f.write(src)
-    #f.close()
-    #bot.send_message(message.chat.id, 'Что сделать с фоткой?',parse_mode='html', reply_markup=markup)
-    #return src
-
 bot.polling(none_stop=True)
