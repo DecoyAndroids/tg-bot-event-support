@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 
 
-bot = telebot.TeleBot('6790289233:AAEYF-avnqb1aAukBo8C4veHZa1P1kEWet8')
+bot = telebot.TeleBot('token')
 
 
 @bot.message_handler(commands=['start'])
@@ -10,7 +10,7 @@ def start(message):
     mass = f"👋 Привет {message.from_user.first_name}! Я бот который поможет тебе в обратной связи с организаторами мероприятия."
     bot.send_message(message.from_user.id, mass , parse_mode='html')
     photo1 = open('stas.jpg','rb')
-    mass = f"Напиши номер своего стола и проблему, с которой столкнулась твоя команда. Так же, возможно, мы уже знаем ответ на твой вопрос, посмотри пункты в меню"
+    mass = f"Напиши номер своего стола, название команды и проблему, с которой столкнулась твоя команда. Так же, возможно, мы уже знаем ответ на твой вопрос, посмотри пункты в меню"
     bot.send_photo(message.from_user.id, photo=photo1 , caption=mass)
     photo1.close()
 
@@ -77,7 +77,7 @@ def primer(message):
         markup.add(raspis, vk, vk_chat, tg)
         bot.send_message(message.from_user.id, 'сообщение отправленно')
         mass1 = 'Организатор, тебе тут сообщениее' + text
-        chat_id = '1019790287'
+        chat_id = 'id_человека_кому_будет_переслано_сообщение'
         bot.send_message(chat_id, mass1)
 
 bot.polling(none_stop=True)
